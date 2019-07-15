@@ -9,7 +9,7 @@ development:
   default: &default
   adapter: mysql2
   encoding: utf8
-  username: root
+  username:
   password:
   host: localhost
   port: 3306

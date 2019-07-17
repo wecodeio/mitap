@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Mitap</title>
-    <%= csrf_meta_tags %>
+      <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,6 +10,25 @@
   </head>
 
   <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo">MITAP Lugar de encuentros</a>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Organizadores</a>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Eventos', new_event_path %>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inscriptos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mails</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

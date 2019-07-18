@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MITAP</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>MITAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" type="text/css" href="../desing/application.html" media="screen" />   <!-- Como hago para acceder a este archivo? -->
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <a class="logo">MITAP Lugar de encuentros</a>
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Organizadores</a>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="contenedor_principal" style="width: 90%; margin: auto; background-color: rgba(191, 174, 63, 0.2);">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">MITAP Lugar de encuentros</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Ver eventos <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <%= link_to 'Eventos', new_event_path %>
+            <a class="nav-link" href="#">Organizadores <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Inscriptos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Mails</a>
+            <a class="nav-link" href="#">Mails <span class="sr-only">(current)</span></a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <%= yield %>
-  </body>
+      </div>
+    </nav>
+
+    <div>
+      <%= yield %>
+    </div>
+
+  </div>
+</body>
 </html>

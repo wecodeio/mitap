@@ -1,47 +1,44 @@
-<%= form_with(model: event, local: true) do |form| %>
+  <%= form_with(model: event, local: true) do |form| %>
   <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
-      <ul>
+    <ul>
       <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
-<!-- aca tendria que ir el formulario -->
+  <!-- aca tendria que ir el formulario -->
   <form method="post">
-        <fieldset>
-            <legend>Evento</legend>
-            <div>
-                <label for="event_date">Fecha: 22 de Agosto 2019</label>
-                <br>
-                <label for="start_hour">Hora: 19 horas</label>
-                <br>
-                <label for="place">Lugar: Wecode HQ - Mitre 87 PB "B" , Ramos Mejía</label>
-                <br>
-                <label for="description">Descripción del evento: Meetup de programación. Retomamos el ciclo de meetups de programación en las oficinas de Wecode. Esta vez sumamos fuerzas con 404 Zone en la organización! En esta oportunidad tendremos al menos dos charlas:
-                - "Serverless Continuos Integration Delivery" por Tomás Gorkin.
-                > Cada día el software itera mas rápido, las necesidades cambian y los usuarios son cada vez mas ansiosos. En esta charla veremos cómo podemos plantear una estructura escalable, independiente y de rápida iteración.
-                - Experiencia en una mentoría de programación, por Fabián Lagorio y Guido Rombolá.
-                > Fabián y Guido van a mostrarnos lo que aprendieron poniendo en práctica los conocimientos aprendidos en la Facultad con la experiencia de completar un proyecto en un entorno laboral.</label>
-                <br>
-                <label for="expositor">Expositores: Lucas Videla, Nicolas Cerrini, Joaquín Vicente y Federico Gasior</label>
-                <br>
-                <label for="max_capacity">Capacidad</label>
-                <input type="number" id="max_capacity" name="max_capacity" placeholder="30" min="1" max="30" required="required">
-                <br>
-                <br>
-            </div>
-        </fieldset>
-  </form>
-  
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-
-<% end %>
+    <fieldset>
+      <legend>Evento</legend>
+      <div>
+        <label for="event_date">Fecha: 22 de Agosto 2019</label>
+        <br>
+        <label for="start_hour">Hora: 19 horas</label>
+        <br>
+        <label for="place">Lugar: Wecode HQ - Mitre 87 PB "B" , Ramos Mejía</label>
+        <br>
+        <label for="description">Descripción del evento: Meetup de programación. Retomamos el ciclo de meetups de programación en las oficinas de Wecode. Esta vez sumamos fuerzas con 404 Zone en la organización! En esta oportunidad tendremos al menos dos charlas:
+          - "Serverless Continuos Integration Delivery" por Tomás Gorkin.
+          > Cada día el software itera mas rápido, las necesidades cambian y los usuarios son cada vez mas ansiosos. En esta charla veremos cómo podemos plantear una estructura escalable, independiente y de rápida iteración.
+          - Experiencia en una mentoría de programación, por Fabián Lagorio y Guido Rombolá.
+          > Fabián y Guido van a mostrarnos lo que aprendieron poniendo en práctica los conocimientos aprendidos en la Facultad con la experiencia de completar un proyecto en un entorno laboral.</label>
+          <br>
+          <label for="expositor">Expositores: Lucas Videla, Nicolas Cerrini, Joaquín Vicente y Federico Gasior</label>
+          <br>
+          <label for="max_capacity">Capacidad</label>
+          <input type="number" id="max_capacity" name="max_capacity" placeholder="30" min="1" max="30" required="required">
+          <br>
+          <br>
+        </div>
+      </fieldset>
+    </form>
+    
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+    <% end %>

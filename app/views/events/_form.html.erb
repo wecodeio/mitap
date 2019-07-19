@@ -10,14 +10,7 @@
     </ul>
   </div>
   <% end %>
-
-  
-
-  
-  <form method="post">
-    <fieldset>
-
-      <legend>Meetup de programación</legend>
+    
       <div>
         <div class="form-group">
           <%= form.label :name, 'Nombre del evento' %>
@@ -38,29 +31,25 @@
           <%= form.text_field :place, class: "form-control" %>
         </div>
         <br>
-
         <div class="form-group">
           <%= form.label :description, "Descripción:" %>
           <%= form.text_field :description, class: "form-control" %>
         </div>
-          <br>
-          <label for="expositor">Expositores: </label>
-          <input type="text" name="description" size="160">
-          <br>
-        <label for="description">Descripción del evento: </label>
-        <input type="text" name="description" size="160">
-          <br>
-          <label for="expositor">Expositores: </label>
-          <input type="text" name="description" size="160">
-          <br>
-          <label for="max_capacity">Capacidad</label>
-          <input type="number" id="max_capacity" name="max_capacity" placeholder="30" min="1" max="30" required="required">
-          <br>
-          <br>
+        <br>
+        <div class="form-group">
+          <%= form.label :speakers, "Expositores:" %>
+          <%= form.text_field :speakers, class: "form-control" %>
         </div>
-      </fieldset>
-    </form>
-    
+        <br>
+        <br>
+        <div class="form-group">
+          <%= form.label :max_capacity, "Capacidad:" %>
+          <%= form.number_field :max_capacity, class: "form-control" %>
+        </div>
+        <br>
+        <br>
+      </div>
+          
     <div class="actions">
       <%= form.submit "Crear Evento"%>
     </div>

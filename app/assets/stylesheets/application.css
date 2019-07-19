@@ -14,8 +14,6 @@
  *= require_self
  */
 
-
-
 .main_container{
 	width: 90%;
 	margin: auto;
@@ -25,4 +23,12 @@
 .button_new_event{
 	text-align: right;
 	padding-bottom: 1em;
+}
+.container_form_event_error{
+	width: 70%;
+	float: left;
+}
+.container_form_event_buttons{
+	width: 30%;
+	float: right;
 }

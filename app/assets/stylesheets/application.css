@@ -21,3 +21,8 @@
 	margin: auto;
 	background-color: rgba(191, 174, 63, 0.2);
 }
+
+.button_new_event{
+	text-align: right;
+	padding-bottom: 1em;
+}

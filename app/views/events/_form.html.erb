@@ -11,22 +11,39 @@
   </div>
   <% end %>
 
-  <!-- aca tendria que ir el formulario -->
+  
+
+  
   <form method="post">
     <fieldset>
-      <legend>Meetup de programación</legend>
       <div>
-        <label for="event_date">Fecha: 22 de Agosto 2019</label>
+        <div class="form-group">
+          <%= form.label :name, 'Nombre del evento' %>
+          <%= form.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= form.label :event_date, 'Fecha' %>
+          <%= form.date_field :event_date, class: 'form-control' %>
+        </div>
         <br>
-        <label for="start_hour">Hora: 19 horas</label>
+        <div class="form-group">
+          <%= form.label :start_hour, "Hora" %>
+          <%= form.time_field :start_hour, class: "form-control" %>
+        </div>
         <br>
-        <label for="place">Lugar: Wecode HQ - Mitre 87 PB "B" , Ramos Mejía</label>
+        <div class="form-group">
+          <%= form.label :place, "Lugar:" %>
+          <%= form.text_field :place, class: "form-control" %>
+        </div>
         <br>
-        <label for="description">Descripción del evento: </label>
-        <input type="text" name="description" size="160">
+        <div class="form-group">
+          <%= form.label :description, "Descripción:" %>
+          <%= form.text_field :description, class: "form-control" %>
+        </div>
           <br>
           <label for="expositor">Expositores: </label>
           <input type="text" name="description" size="160">
+          <br>
           <br>
           <label for="max_capacity">Capacidad</label>
           <input type="number" id="max_capacity" name="max_capacity" placeholder="30" min="1" max="30" required="required">
@@ -37,6 +54,6 @@
     </form>
     
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit "Crear Evento"%>
     </div>
     <% end %>

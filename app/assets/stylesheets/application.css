@@ -20,15 +20,16 @@
 	background-color: rgba(191, 174, 63, 0.2);
 }
 
-.button_new_event{
-	text-align: right;
+.button_align_right{
+	text-align: right; 
 	padding-bottom: 1em;
 }
-.container_form_event_error{
+
+.form_end_container_error{
 	width: 70%;
 	float: left;
 }
-.container_form_event_buttons{
+.form_end_container_buttons{
 	width: 30%;
 	float: right;
 }

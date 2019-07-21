@@ -54,9 +54,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="">Expositores</span>
         </div>
-        <div class="form-control">
           <%= form.text_field :speakers, class: "form-control" %>
-        </div>
       </div>
     </div>
 
@@ -71,8 +69,9 @@
 
   </div>
 
-  <div class="container_form_event">
-    <div class="container_form_event_error">
+  <div class="form_end_container">
+
+    <div class="form_end_container_error">
       <% if event.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -86,12 +85,11 @@
       <% end %>
     </div>
 
-    <div class="container_form_event_buttons">
-      <div class="button_new_event">
+    <div class="form_end_container_buttons">
+      <div class="button_align_right">
         <%= form.submit "Crear evento", class: "btn btn-success"%>
       </div>
-
-      <div class="button_new_event">
+      <div class="button_align_right">
         <%= link_to 'Volver', events_path, class: "btn btn-secondary"%>
       </div>
     </div>

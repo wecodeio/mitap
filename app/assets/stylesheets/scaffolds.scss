@@ -5,9 +5,9 @@
 
 .field_with_errors {
   background-color: #ffff21;
-  /*No hay caso*/
+  /* No hay caso*/
   /* Resulta que cuando hay un error, y se aplica ésta clase, la clase que tiene el "campo erróneo" del formulario hasta ese momento, se pisa.*/
-  /* Entonces, se pierde el formato "lindo" con el que se ve.
+  /* Entonces, se pierde el formato "lindo" con el que se ve. */
 }
 
 #error_explanation {

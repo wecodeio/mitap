@@ -1,6 +1,40 @@
 <p id="notice"><%= notice %></p>
 
+<div class="form-group">
+    <label>Nombre del evento:</label>
+    <%= @event.name  %>
+</div>
+<br>
+<div class="form-group">
+    <label>Fecha:</label>
+    <%= l @event.event_date, format: '%A, %d de %B de %Y'  %>
+</div>
+<br>
+<div class="form-group">
+    <label>Hora de comienzo:</label>
+    <%= @event.start_hour %>
+</div>
+<br>
+<div class="form-group">
+    <label>Hora de final:</label>
+    <%= @event.end_hour %>
+</div>
+<br>
+<div class="form-group">
+    <label>Descripción del evento:</label>
+    <%= @event.description %>
+</div>
+<br>
+<div class="form-group">
+    <label>Capacidad:</label>
+    <%= @event.max_capacity %>
+</div>
+<br>
+<div class="form-group">
+    <label>Descripción del evento:</label>
+    <%= @event.place %>
+</div>
+<br>
 
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Editar', edit_event_path(@event) %>
+<%= link_to 'Atras', events_path %>

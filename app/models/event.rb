@@ -9,7 +9,9 @@ class Event < ApplicationRecord
 	validate :validar_hora
 
 	def validar_hora
-		if start_hour > end_hour
+		if start_hour.present?and
+			end_hour.present?and
+			start_hour > end_hour
 			errors.add(start_hour, "Hora de inicio inválida")
 			errors.add(end_hour, "Hora de fin inválida")
 		end

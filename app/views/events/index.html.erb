@@ -1,0 +1,17 @@
+<h1>MITAP - LUGAR DE ENCUENTROS</h1>
+
+<h2>Próximos eventos</h2>
+<ul class="list-group">
+  <% @events.each do |event| %>
+  <li class="list-group-item">
+    <div class="form-group">
+      <label>Nombre del evento:</label>
+      <%= event.name %><br>
+      <label>Fecha:</label>
+      <%= event.event_date %><br>
+      
+    </div>
+  </li>
+  <br>
+  <% end %>
+</ul>

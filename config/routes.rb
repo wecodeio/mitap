@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     resources :events 
    end
 
-   resources :events
+   resources :events, only: [:index, :show]
 end

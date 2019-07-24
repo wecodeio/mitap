@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>MITAP - LUGAR DE ENCUENTROS</h1>
 
 <h2>Próximos eventos</h2>
@@ -9,9 +11,18 @@
       <%= event.name %><br>
       <label>Fecha:</label>
       <%= event.event_date %><br>
-      
     </div>
   </li>
   <br>
   <% end %>
 </ul>
+
+<h2>Grupos</h2>
+<ul class="list-group">
+  <li class="list-group-item">Tecnología</li>
+  <li class="list-group-item">Deporte</li>
+  <li class="list-group-item">Turismo</li>
+  <li class="list-group-item">Música y Ocio</li>
+</ul>
+
+<input type="submit" name="enviar" value="Registrarse">

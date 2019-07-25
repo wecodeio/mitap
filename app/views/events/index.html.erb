@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>MITAP - LUGAR DE ENCUENTROS</h1>
 
 <h2>Próximos eventos</h2>
@@ -12,6 +10,7 @@
       <label>Fecha:</label>
       <%= event.event_date %><br>
     </div>
+    <%= link_to 'Ver Evento', event_path(event) %>
   </li>
   <br>
   <% end %>
@@ -22,7 +21,8 @@
   <li class="list-group-item">Tecnología</li>
   <li class="list-group-item">Deporte</li>
   <li class="list-group-item">Turismo</li>
-  <li class="list-group-item">Música y Ocio</li>
+  <li class="list-group-item">Música</li>
+  <li class="list-group-item">Libros</li>
 </ul>
 
-<input type="submit" name="enviar" value="Registrarse">
+<input type="submit" name="enviar" value="Registrarse"><br><br>

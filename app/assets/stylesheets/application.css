@@ -23,6 +23,7 @@
 .button_align_right{
 	text-align: right; 
 	padding-bottom: 1em;
+	padding: 1em;
 }
 
 .form_end_container_error{

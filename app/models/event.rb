@@ -6,7 +6,6 @@ class Event < ApplicationRecord
 	validates :place, length: { maximum: 30 }
 	validates :name, uniqueness: true
 	validates :description, length: { in: 50..300 }
-	validates :nombre, presence: true
 
 	validates :max_capacity, numericality: { only_integer: true }
 

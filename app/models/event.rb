@@ -6,9 +6,11 @@ class Event < ApplicationRecord
 	validates :name, uniqueness: true
 	validates :description, length: { in: 50..300 }
 =end
-	#validates :nombre, presence: true
+	validates :name, :speakers, :description, presence: true
 
-	#validates :max_capacity, numericality: { only_integer: true }
+	validates :description, length: { in: 50..300 }
+
+	validates :max_capacity, numericality: { only_integer: true }
 
 	validate :validar_hora
 

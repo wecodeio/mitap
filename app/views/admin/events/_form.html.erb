@@ -55,7 +55,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="">Expositores</span>
         </div>
-          <%= form.text_field :speakers, class: "form-control" %>
+        <%= form.text_field :speakers, class: "form-control" %>
       </div>
     </div>
 
@@ -88,10 +88,8 @@
 
     <div class="form_end_container_buttons">
       <div class="button_align_right">
-        <%= form.submit "Crear evento", class: "btn btn-success"%>
-      </div>
-      <div class="button_align_right">
         <%= link_to 'Volver', admin_events_path, class: "btn btn-secondary"%>
+        <%= form.submit "Crear evento", class: "btn btn-dark"%> 
       </div>
     </div>
   </div>

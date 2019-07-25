@@ -30,18 +30,21 @@
 }
 
 .yield_container{
-	
 	background-color: rgba(2, 35, 22, 0.2);
 	opacity: 20%;
 	padding-left: 2%;
 	padding-right: 2%;
 	margin-top: 2em;
 }
+.yield_core_container{
+	padding-top: 0.6em;
+	padding-bottom: 0.1rem;
+}
 
 .button_align_right{
 	text-align: right; 
+	padding-top: 1em;
 	padding-bottom: 1em;
-	padding: 1em;
 }
 
 .form_end_container_error{

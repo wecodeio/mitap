@@ -55,3 +55,15 @@
 	width: 30%;
 	float: right;
 }
+
+.show_container{
+	background-color: #ffff;
+}
+.show_core_container{
+	padding: 1em;
+}
+
+.show_container_target{
+	text-align: right;
+	float: right;
+}

@@ -14,10 +14,28 @@
  *= require_self
  */
 
+.background_design{
+	background-color: rgb(215, 88, 10);
+	min-height: 30em;
+}
+.footer{
+	position: relative;
+	text-align: center;
+	background-color: #ffff;
+}
 .main_container{
 	width: 90%;
+	min-height: 31em;
 	margin: auto;
-	background-color: rgba(191, 174, 63, 0.2);
+}
+
+.yield_container{
+	
+	background-color: rgba(2, 35, 22, 0.2);
+	opacity: 20%;
+	padding-left: 2%;
+	padding-right: 2%;
+	margin-top: 2em;
 }
 
 .button_align_right{

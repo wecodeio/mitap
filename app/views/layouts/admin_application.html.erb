@@ -16,8 +16,7 @@
 </head>
 
 <body>
-  <div class="main_container">
-
+  <div class="background_design">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">MITAP - Lugar de encuentros</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,10 +41,15 @@
       </div>
     </nav>
 
-    <div>
-      <%= yield %>
+    <div class="main_container">
+      <div class="yield_container">
+        <%= yield %>
+      </div>
     </div>
 
+    <div class="footer">
+      <br>by Mentoría 2.0 - WeCode
+    </div>
   </div>
 </body>
 </html>

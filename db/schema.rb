@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_21_172956) do
+ActiveRecord::Schema.define(version: 2019_07_26_175917) do
+
+  create_table "event_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -23,6 +29,7 @@ ActiveRecord::Schema.define(version: 2019_07_21_172956) do
     t.datetime "updated_at", null: false
     t.string "speakers"
     t.time "end_hour"
+    t.integer "event_group_id"
   end
 
 end

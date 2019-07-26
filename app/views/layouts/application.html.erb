@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MITAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <link rel="stylesheet" type="text/css" href="/assets/application.css" media="screen" />   <!-- Como hago para acceder a este archivo? -->
+  <link rel="stylesheet" type="text/css" href="/assets/events.scss" media="screen" />   <!-- Como hago para acceder a este archivo? -->
+  <%= javascript_include_tag("application.js") %>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="background_design">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">MITAP - Lugar de encuentros</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Ver eventos<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Grupos<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inscriptos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mails<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main_container">
+      <div class="yield_container">
+        <div class="yield_core_container">
+        <%= yield %>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <br>by Mentoría 2.0 - WeCode
+    </div>
+  </div>
+</body>
+</html>

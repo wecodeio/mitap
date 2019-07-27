@@ -1,0 +1,15 @@
+<h1>Grupo: Wecode</h1>
+
+<h2></h2>
+<ul class="list-group">
+  <% @events_groups.each do |event_group| %>
+  <li class="list-group-item">
+    <div class="form-group">
+      <label>Grupo de: </label>
+      <%= event_group.name %><br>
+  	</div>
+  </li>
+  <br>
+  <% end %>
+</ul>
+

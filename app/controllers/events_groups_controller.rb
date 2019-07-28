@@ -4,7 +4,7 @@ class EventsGroupsController < ApplicationController
   end
 
   def show
-  	@event_group = Event_group.find(params[:id])
+  	@event_group = EventGroup.find(params[:id])
   end
 
 end

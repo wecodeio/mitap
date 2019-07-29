@@ -6,14 +6,13 @@
   <% @events.each do |event| %>
   <li class="list-group-item">
     <div class="form-group">
-      <label>Nombre del evento:</label>
-      <%= event.name %><br>
-      <label>Fecha:</label>
-      <%= event.event_date %><br>
+        <label>Nombre del evento:</label>
+        <%= event.name %><br>
+        <label>Fecha:</label>
+        <%= event.event_date %><br>
     </div>
-    <%= link_to 'Ver Evento', event_path(event) %>
-  </li>
-  <br>
+      <%= link_to 'Ver Evento', event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
+    </li>
   <% end %>
 </ul>
 
@@ -22,20 +21,12 @@
 </div>
 
 <ul class="list-group">
-<% @event_groups.each do |group| %>
- <li class="list-group-item">
+  <% @event_groups.each do |group| %>
+  <li class="list-group-item">
     <div class="form-group">
       <%= group.name %><br>
     </div>
-    <%= link_to 'Ver eventos del grupo', event_group_path(group) %>
+    <%= link_to 'Ver eventos de éste grupo', event_group_path(group), class: 'btn btn-light btn-sm btn-lg btn-block' %>
   </li>
- <% end %>
-</ul>
-
-<ul class="list-group">
-  <li class="list-group-item">Tecnología</li>
-  <li class="list-group-item">Deporte</li>
-  <li class="list-group-item">Turismo</li>
-  <li class="list-group-item">Música</li>
-  <li class="list-group-item">Libros</li>
+  <% end %>
 </ul>

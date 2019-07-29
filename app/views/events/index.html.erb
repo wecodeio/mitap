@@ -1,6 +1,7 @@
-<h1>MITAP - LUGAR DE ENCUENTROS</h1>
+<div class="tag_index_events">
+  Próximos eventos
+</div>
 
-<h2>Próximos eventos</h2>
 <ul class="list-group">
   <% @events.each do |event| %>
   <li class="list-group-item">
@@ -16,7 +17,21 @@
   <% end %>
 </ul>
 
-<h2>Grupos</h2>
+<div class="tag_index_events">
+  Grupos
+</div>
+
+<ul class="list-group">
+<% @event_groups.each do |group| %>
+ <li class="list-group-item">
+    <div class="form-group">
+      <%= group.name %><br>
+    </div>
+    <%= link_to 'Ver eventos del grupo', event_group_path(group) %>
+  </li>
+ <% end %>
+</ul>
+
 <ul class="list-group">
   <li class="list-group-item">Tecnología</li>
   <li class="list-group-item">Deporte</li>
@@ -24,5 +39,3 @@
   <li class="list-group-item">Música</li>
   <li class="list-group-item">Libros</li>
 </ul>
-<br>
-<input type="submit" name="enviar" value="Registrarse"><br><br>

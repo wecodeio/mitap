@@ -1,46 +1,54 @@
-<h1>Wecode</h1>
-
-<div class="form-group bg-light p-2">
-    <div class="form-group">
-        <label>Nombre del evento:</label>
-        <%= @event.name %>
-    </div>
-    <br>
-    <div class="form-group">
+<div class="show_container">
+    <div class="show_core_container">
+        <p id="notice"><%= notice %></p>
+        <div class="form-group">
+            <label>Nombre del evento:</label>
+            <div class="show_container_target">
+             <h5>
+                 <%= @event.name  %>
+             </h5> 
+         </div>
+     </div>
+     <div class="form-group">
         <label>Fecha:</label>
-        <%= @event.event_date %>
+        <div class="show_container_target">
+            <%= l @event.event_date, format: '%A, %d de %B de %Y'  %>
+        </div>
     </div>
-    <br>
     <div class="form-group">
         <label>Hora de comienzo:</label>
-        <%= @event.start_hour %>
+        <div class="show_container_target">
+            <%= @event.start_hour %>
+        </div>
     </div>
-    <br>
     <div class="form-group">
         <label>Hora de final:</label>
-        <%= @event.end_hour %>
+        <div class="show_container_target">
+            <%= @event.end_hour %>
+        </div>
     </div>
-    <br>
-    <div class="form-group">
-    <label>Lugar:</label>
-        <%= @event.place %>
-    </div>
-    <br>
     <div class="form-group">
         <label>Descripción del evento:</label>
-        <%= @event.description %>
-    </div>
-    <br>
-    <div class="form-group">
-        <label>Expositores:</label>
-        <%= @event.speakers %>
-    </div>
-    <br>
-    <div class="form-group">
+        <div class="show_container_target">
+            <%= @event.description %>
+        </div>
+        <div class="form-group">
+        </div>
         <label>Capacidad:</label>
-        <%= @event.max_capacity %>
+        <div class="show_container_target">
+            <%= @event.max_capacity %>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Descripción del evento:</label>
+        <div class="show_container_target">
+            <%= @event.place %>
+        </div>
     </div>
 </div>
-<%= link_to 'Inscribirse', events_path %> <!-- luego linkeará hacia la inscripción de un usuario -->
-<br><br>
-<%= link_to 'Atrás', events_path %>
+</div>
+
+<div class="button_align_right">
+    <%= link_to 'Atras', events_path, class: 'btn btn-secondary'%>
+    <%= link_to 'Inscribirse', events_path, class: 'btn btn-dark'%> <!-- luego linkeará hacia la inscripción de un usuario -->
+</div>

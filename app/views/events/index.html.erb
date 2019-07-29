@@ -5,7 +5,7 @@
 <ul class="list-group">
   <% @events.each do |event| %>
   <li class="list-group-item">
-    <div class="right_container">
+    <div class="left_container">
       <div class="form-group">
         <h5><%= event.name %></h5>
       </div>
@@ -16,8 +16,8 @@
         <p>Grupo de evento: <%= event.event_group.try(:name) %></p>
       </div>
     </div>
-    <div class="left_container">
-      <%= link_to 'Ver Evento', event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
+    <div class="right_container">
+      <%= link_to 'Mostrar', event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
     </div>
   </li>
   <% end %>
@@ -30,12 +30,12 @@
 <ul class="list-group">
   <% @event_groups.each do |group| %>
   <li class="list-group-item">
-    <div class="right_container">
+    <div class="left_container">
       <div class="form-group">
         <%= group.name %>
       </div>
     </div>
-    <div class="left_container">
+    <div class="right_container">
       <%= link_to 'Mostrar', event_group_path(group), class: 'btn btn-light btn-sm btn-lg btn-block' %>
     </div>
   </li>

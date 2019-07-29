@@ -73,7 +73,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="">Grupo de evento:</span>
         </div>
-        <%= options_from_collection_for_select(EventGroup.all, :id, :name) %>
+        <%= form.collection_select(:event_group_id, EventGroup.all, :id, :name) %>
       </div>
     </div>
 

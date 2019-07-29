@@ -1,4 +1,4 @@
-<div class="tag_index_events">
+<div class="tag_index">
   Próximos eventos
 </div>
 
@@ -13,7 +13,7 @@
         <p>Fecha: <%= event.event_date %></p>
         <p>Horario: <%= event.start_hour %> a <%= event.end_hour %>.</p>
         <p>Lugar: <%= event.place %>. </p>
-        <p>Grupo de evento: <%= event.event_group.try(:name) %></p>
+        <p>Grupo del evento: <%= event.event_group.try(:name) %></p>
       </div>
     </div>
     <div class="right_container">
@@ -23,7 +23,7 @@
   <% end %>
 </ul>
 
-<div class="tag_index_events">
+<div class="tag_index">
   Grupos
 </div>
 

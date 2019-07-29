@@ -1,14 +1,18 @@
-
+<div class="tag_index">
+  <h5>Grupos de eventos existentes </h5>
+</div>
+<div class="notice_index">
 <p id="notice"><%= notice %></p>
+</div>
 <ul class="list-group">
   <% @event_groups.each do |event_group| %>
   <li class="list-group-item">
-    <div class="right_container">
+    <div class="left_container">
       <div class="form-group">
         <h5><%= event_group.name %></h5>
       </div>
     </div>
-    <div class="left_container">
+    <div class="right_container">
       <%= link_to 'Mostrar', admin_event_group_path(event_group), class: 'btn btn-light btn-sm btn-lg btn-block'%>
       <%= link_to 'Editar', edit_admin_event_group_path(event_group), class: 'btn btn-light btn-sm btn-lg btn-block' %>
       <%= link_to 'Borrar', admin_event_group_path(event_group), method: :delete, data: { confirm: 'Estás seguro que querés eliminar el grupo de evento de la lista?' }, class: 'btn btn-light btn-sm btn-lg btn-block' %>

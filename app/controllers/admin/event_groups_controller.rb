@@ -1,8 +1,8 @@
-class Admin::EventsGroupsController < Admin::BaseController
+class Admin::EventGroupsController < Admin::BaseController
   before_action :set_event_group, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events_groups = EventGroup.all
+    @event_groups = EventGroup.all
   end
 
   def show
@@ -20,7 +20,7 @@ class Admin::EventsGroupsController < Admin::BaseController
 
     respond_to do |format|
       if @event_group.save
-        format.html { redirect_to admin_events_group_path(@event_group),
+        format.html { redirect_to admin_event_groups_path(@event_group),
          notice: 'El grupo de evento fué creado satisfactoriamente.' }
       else
         format.html { render :new }
@@ -30,8 +30,8 @@ class Admin::EventsGroupsController < Admin::BaseController
   
   def update
     respond_to do |format|
-      if @event_group.update(events_group_params)
-        format.html { redirect_to admin_events_group_path(@event_group),
+      if @event_group.update(event_group_params)
+        format.html { redirect_to admin_event_groups_path(@event_group),
          notice: 'El grupo de evento fué editado satisfactoriamente.' }
       else
         format.html { render :edit }
@@ -42,7 +42,7 @@ class Admin::EventsGroupsController < Admin::BaseController
   def destroy
     @event_group.destroy
     respond_to do |format|
-      format.html { redirect_to admin_events_group_url,
+      format.html { redirect_to admin_event_groups_url,
       notice: 'El grupo de evento fué eliminado satisfactoriamente.' }
     end
   end

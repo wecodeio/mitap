@@ -1,46 +1,46 @@
 <h1>Wecode</h1>
 
-
-<div class="form-group">
-    <label>Nombre del evento:</label>
-    <%= @event.name %>
+<div class="form-group bg-light p-2">
+    <div class="form-group">
+        <label>Nombre del evento:</label>
+        <%= @event.name %>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Fecha:</label>
+        <%= @event.event_date %>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Hora de comienzo:</label>
+        <%= @event.start_hour %>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Hora de final:</label>
+        <%= @event.end_hour %>
+    </div>
+    <br>
+    <div class="form-group">
+    <label>Lugar:</label>
+        <%= @event.place %>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Descripción del evento:</label>
+        <%= @event.description %>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Expositores:</label>
+        <%= @event.speakers %>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Capacidad:</label>
+        <%= @event.max_capacity %>
+    </div>
 </div>
-<br>
-<div class="form-group">
-    <label>Fecha:</label>
-    <%= @event.event_date %>
-</div>
-<br>
-<div class="form-group">
-    <label>Hora de comienzo:</label>
-    <%= @event.start_hour %>
-</div>
-<br>
-<div class="form-group">
-    <label>Hora de final:</label>
-    <%= @event.end_hour %>
-</div>
-<br>
-<label>Lugar:</label>
-    <%= @event.place %>
-</div>
-<br>
-<div class="form-group">
-    <label>Descripción del evento:</label>
-    <%= @event.description %>
-</div>
-<br>
-<div class="form-group">
-    <label>Expositores:</label>
-    <%= @event.speakers %>
-</div>
-<br>
-<div class="form-group">
-    <label>Capacidad:</label>
-    <%= @event.max_capacity %>
-</div>
-<br>
-
 <%= link_to 'Inscribirse', events_path %> <!-- luego linkeará hacia la inscripción de un usuario -->
 <br><br>
 <%= link_to 'Atrás', events_path %>

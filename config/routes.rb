@@ -4,10 +4,10 @@ Rails.application.routes.draw do
    end
 
    namespace :admin do
-    resources :events_groups 
+    resources :event_groups 
    end
 
    resources :events, only: [:index, :show]
 
-   resources :events_groups, only: [:index, :show]
+   resources :event_groups, only: [:index, :show]
 end

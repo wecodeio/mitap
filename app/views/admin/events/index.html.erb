@@ -11,6 +11,7 @@
         <p>Fecha: <%= event.event_date %></p>
         <p>Horario: <%= event.start_hour %> a <%= event.end_hour %>.</p>
         <p>Lugar: <%= event.place %>. </p>
+        <p>Grupo de evento: <%= event.event_group.try(:name) %></p>
       </div>
     </div>
     <div class="left_container">

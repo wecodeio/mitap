@@ -31,11 +31,15 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Grupos<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Ingresar<span class="sr-only">(current)</span></a>
-          </li>
         </ul>
       </div>
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log Out", logout_path %>
+      <% else %>
+        <%= link_to "Sign Up", signup_path %>
+        <%= link_to "Log In", login_path %>
+      <% end %>
     </nav>
 
     <div class="main_container">

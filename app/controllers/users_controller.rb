@@ -4,10 +4,10 @@ class UsersController < ApplicationController
 	end
 
 	def create
-	  @user = User.new(params[:user])
+	  @user = User.new(user_params)
 	  if @user.save
 	    session[:user_id] = @user.id
-	    redirect_to root_url, notice: "Gracias por registrarse!"
+	    redirect_to events_path, notice: "Gracias por registrarse!"
 	  else
 	    render "new"
 	  end
@@ -15,6 +15,6 @@ class UsersController < ApplicationController
 
 	private
 	  def user_params
-	    params.require(:user).permit(:username, :email, :password, :encrypted_password)
+	    params.require(:user).permit(:email, :password, :password_confirmation)
 	  end
 end

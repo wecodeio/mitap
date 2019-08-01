@@ -26,21 +26,35 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Ver eventos<span class="sr-only">(current)</span></a>
+             <%= link_to "Ver eventos", events_path, class: 'nav-link' %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Grupos<span class="sr-only">(current)</span></a>
+          <li class="nav-item active">
+             <%= link_to "Ver grupos", event_groups_path, class: 'nav-link' %>
           </li>
         </ul>
-      </div>
 
+        <ul class="navbar-nav">
       <% if current_user %>
-        Logged in as <%= current_user.email %>.
-        <%= link_to "Cerrar sesión", logout_path %>
+
+           <span class="navbar-text">
+        Logged in as <%= current_user.email %> |
+          </span>
+          <li class="nav-item active">
+        <%= link_to "Cerrar sesión", logout_path, class: 'nav-link' %>
+          </li>
+
       <% else %>
-        <%= link_to "Registrarse", signup_path %> 
-        <%= link_to "Ingresar", login_path %>
+
+          <li class="nav-item active">
+        <%= link_to 'Registrarse', signup_path, class: 'nav-link'%> 
+          </li>
+          <li class="nav-item active">
+        <%= link_to "Ingresar", login_path, class: 'nav-link' %>
+          </li>
+
       <% end %>
+        </ul>
+      </div>
     </nav>
 
     <div class="main_container">

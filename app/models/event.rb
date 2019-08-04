@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
 
 	belongs_to :event_group
+
+	has_many :registrations
 	
 	validates :name, :place, :start_hour, :end_hour, :description, :event_date,
 	 :max_capacity, :speakers, presence: true

@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     resources :event_groups 
    end
 
-   resources :events, only: [:index, :show]
+   resources :events, only: [:index, :show]  do
+     get :register, on: :member
+   end
 
    resources :event_groups, only: [:index, :show]
 
@@ -19,4 +21,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
+
+
 end

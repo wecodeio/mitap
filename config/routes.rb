@@ -6,11 +6,12 @@ Rails.application.routes.draw do
    end
 
    namespace :admin do
-    resources :event_groups 
+     resources :event_groups 
    end
 
    resources :events, only: [:index, :show]  do
      get :register, on: :member
+     get :unregister, on: :member
    end
 
    resources :event_groups, only: [:index, :show]

@@ -55,5 +55,10 @@
 
 <div class="button_align_right">
     <%= link_to 'Atras', events_path, class: 'btn btn-secondary'%>
-    <%= link_to 'Inscribirse', register_event_path(@event), class: 'btn btn-light'%>
+
+    <% if Registration.where(user: current_user, event: Event.find(params[:id])).exists? %>
+        <%= link_to 'Anular inscripción', unregister_event_path(@event), class: 'btn btn-light'%>
+    <% else %>
+        <%= link_to 'Inscribirse', register_event_path(@event), class: 'btn btn-light'%>
+    <% end %>
 </div>

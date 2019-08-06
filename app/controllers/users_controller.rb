@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 	  @user = User.new(user_params)
 	  if @user.save
 	    session[:user_id] = @user.id
-	    redirect_to events_path, notice: "Gracias por registrarse!"
+	    redirect_to events_path
+	    flash.alert "¡Gracias por registrarse!"
 	  else
 	    render "new"
 	  end

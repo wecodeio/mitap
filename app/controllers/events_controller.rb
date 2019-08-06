@@ -40,5 +40,16 @@ class EventsController < ApplicationController
     redirect_to event_path
     flash.alert = "te inscribiste correctamente al evento"
   end
+
+  def unregister
+    user = current_user
+    event = Event.find(params[:id])
+    register = Registration.where(user: user, event: event)
+    if register.exists?
+      register.first.destroy
+      redirect_to :action => :show
+      flash.alert = "Anulaste tu inscripción al evento correctamente"
+    end
+  end
   		
 end

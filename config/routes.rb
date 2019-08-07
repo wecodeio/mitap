@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   resources :users
+   
    namespace :admin do
     resources :events
    end
@@ -14,7 +15,10 @@ Rails.application.routes.draw do
      get :unregister, on: :member
    end
 
-   resources :event_groups, only: [:index, :show]
+   resources :event_groups, only: [:index, :show]  do
+     get :register, on: :member
+     get :unregister, on: :member
+   end
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
@@ -23,5 +27,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
 
+  
 
 end

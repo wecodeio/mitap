@@ -1,28 +1,39 @@
-<h1>Registrarse</h1>
-
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
+<div class="focuded_content">
+  <div class="show_core_container">
+    <div class="tag_index">
+      Registrarse
+    </div>
+    <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
       <ul>
         <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+        <li><%= message %></li>
         <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %> 
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <div class="form_group">
+      <%= f.label :email %><br>
+      <%= f.text_field :email, class: 'form_control'%>
+    </div>
+    <div class="form_group">
+      <%= f.label :password %><br>
+      <%= f.password_field :password, class: 'form_control' %>
+    </div>
+    <div class="form_group">
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation, class: 'form_control'%>
+    </div>
+
+    <div class="button_align_right">
+      <%= f.submit "Registrarse",  class: "btn btn-dark"%>
+    </div>
+
+
+    <% end %>
+
   </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions"><%= f.submit "Registrarse" %></div>
-<% end %>
+</div>

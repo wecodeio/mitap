@@ -50,11 +50,9 @@
 
 .form_end_container_error{
 	width: 70%;
-	float: left;
 }
 .form_end_container_buttons{
-	width: 30%;
-	float: right;
+	align-content: right;
 }
 
 .show_container{

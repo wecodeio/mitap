@@ -1,18 +1,20 @@
 <div class="show_container">
-    <div class="show_core_container">
-        <p id="notice"><%= notice %></p>
-        <div class="form-group">
-            <label>Nombre del grupo de evento:</label>
-            <div class="show_container_target">
-               <h5>
-                   <%= @event_group.name  %>
-               </h5> 
-           </div>
-       </div>
+  <div class="show_core_container">
+    <div class="notice_index">
+      <p id="notice"><%= notice %></p>
+    </div>
+    <div class="form-group">
+      <label>Nombre del grupo de evento:</label>
+      <div class="show_container_target">
+       <h5>
+         <%= @event_group.name  %>
+       </h5> 
+     </div>
    </div>
+ </div>
 </div>
 
 <div class="button_align_right">
-    <%= link_to 'Atras', admin_event_groups_path, class: 'btn btn-secondary'%>
-    <%= link_to 'Editar', edit_admin_event_group_path(@event_group), class: 'btn btn-dark'%>
+  <%= link_to 'Atras', admin_event_groups_path, class: 'btn btn-secondary'%>
+  <%= link_to 'Editar', edit_admin_event_group_path(@event_group), class: 'btn btn-dark'%>
 </div>

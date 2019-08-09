@@ -1,56 +1,59 @@
 <div class="show_container">
     <div class="show_core_container">
-        <p id="notice"><%= notice %></p>
-        <div class="form-group">
-            <label>Nombre del evento:</label>
-            <div class="show_container_target">
-             <h5>
-                 <%= @event.name  %>
-             </h5> 
-         </div>
-     </div>
-     <div class="form-group">
-        <label>Fecha:</label>
+        <div class="notice_index">
+          <p id="notice"><%= notice %></p>
+      </div>
+      <div class="form-group">
+        <label>Nombre del evento:</label>
         <div class="show_container_target">
-            <%= l @event.event_date, format: '%A, %d de %B de %Y'  %>
-        </div>
+           <h5>
+               <%= @event.name  %>
+           </h5> 
+       </div>
+   </div>
+   
+   <div class="form-group">
+    <label>Fecha:</label>
+    <div class="show_container_target">
+        <%= l @event.event_date, format: '%A, %d de %B de %Y'  %>
+    </div>
+</div>
+<div class="form-group">
+    <label>Hora de comienzo:</label>
+    <div class="show_container_target">
+        <%= @event.start_hour %>
+    </div>
+</div>
+<div class="form-group">
+    <label>Hora de final:</label>
+    <div class="show_container_target">
+        <%= @event.end_hour %>
+    </div>
+</div>
+<div class="form-group">
+    <label>Descripción del evento:</label>
+    <div class="show_container_target">
+        <%= @event.description %>
     </div>
     <div class="form-group">
-        <label>Hora de comienzo:</label>
-        <div class="show_container_target">
-            <%= @event.start_hour %>
-        </div>
     </div>
-    <div class="form-group">
-        <label>Hora de final:</label>
-        <div class="show_container_target">
-            <%= @event.end_hour %>
-        </div>
+    <label>Capacidad:</label>
+    <div class="show_container_target">
+        <%= @event.max_capacity %>
     </div>
-    <div class="form-group">
-        <label>Descripción del evento:</label>
-        <div class="show_container_target">
-            <%= @event.description %>
-        </div>
-        <div class="form-group">
-        </div>
-        <label>Capacidad:</label>
-        <div class="show_container_target">
-            <%= @event.max_capacity %>
-        </div>
+</div>
+<div class="form-group">
+    <label>Descripción del evento:</label>
+    <div class="show_container_target">
+        <%= @event.place %>
     </div>
-    <div class="form-group">
-        <label>Descripción del evento:</label>
-        <div class="show_container_target">
-            <%= @event.place %>
-        </div>
+</div>
+<div class="form-group">
+    <label>Grupo del evento</label>
+    <div class="show_container_target">
+        <%= @event.event_group.try(:name) %>
     </div>
-    <div class="form-group">
-        <label>Grupo del evento</label>
-        <div class="show_container_target">
-            <%= @event.event_group.try(:name) %>
-        </div>
-    </div>
+</div>
 </div>
 </div>
 

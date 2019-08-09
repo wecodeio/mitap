@@ -1,85 +1,82 @@
   <%= form_for([:admin, event]) do |form| %>
 
-  <div>
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Nombre del evento</span>
-        </div>
-        <%= form.text_field :name, class: 'form-control' %>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Nombre del evento</span>
       </div>
+      <%= form.text_field :name, class: 'form-control' %>
     </div>
-
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Fecha</span>
-        </div>
-        <%= form.date_field :event_date, class: 'form-control' %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Hora de comienzo</span>
-        </div>
-        <%= form.time_field :start_hour, class: "form-control" %>
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Hora de fin (estimada)</span>
-        </div>
-        <%= form.time_field :end_hour, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Lugar</span>
-        </div>
-        <%= form.text_field :place, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Descripción</span>
-        </div>
-        <%= form.text_area :description, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Expositores</span>
-        </div>
-        <%= form.text_field :speakers, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Capacidad</span>
-        </div>
-        <%= form.number_field :max_capacity, class: "form-control" %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="">Grupo de evento:</span>
-        </div>
-        <%= form.collection_select(:event_group_id, EventGroup.all, :id, :name) %>
-      </div>
-    </div>
-
   </div>
 
-  <div class="form_end_container">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Fecha</span>
+      </div>
+      <%= form.date_field :event_date, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Hora de comienzo</span>
+      </div>
+      <%= form.time_field :start_hour, class: "form-control" %>
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Hora de fin (estimada)</span>
+      </div>
+      <%= form.time_field :end_hour, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Lugar</span>
+      </div>
+      <%= form.text_field :place, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Descripción</span>
+      </div>
+      <%= form.text_area :description, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Expositores</span>
+      </div>
+      <%= form.text_field :speakers, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Capacidad</span>
+      </div>
+      <%= form.number_field :max_capacity, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">Grupo de evento:</span>
+      </div>
+      <%= form.collection_select(:event_group_id, EventGroup.all, :id, :name)%>
+    </div>
+  </div>
+
+  <div class="form-group">
     <div class="form_end_container_error">
       <% if event.errors.any? %>
       <div id="error_explanation">

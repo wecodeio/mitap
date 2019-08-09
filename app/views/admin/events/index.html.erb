@@ -22,9 +22,10 @@
       <%= link_to 'Mostrar', admin_event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block'%>
       <%= link_to 'Editar', edit_admin_event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
       <%= link_to 'Borrar', admin_event_path(event), method: :delete, data: { confirm: 'Estás seguro que querés eliminar el evento de la lista?' }, class: 'btn btn-light btn-sm btn-lg btn-block' %>
+      <%= link_to 'Mostrar inscriptos', admin_registration_path(event), class: 'btn btn-light btn-sm btn-lg btn-block'%>
     </div>
- </li>
- <% end %>
+  </li>
+  <% end %>
 </ul>
 
 <div class="button_align_right">

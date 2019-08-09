@@ -20,7 +20,15 @@
       </div>
     </div>
     <div class="right_container">
+
+      <% if Registration.where(user: current_user, event: event.id).exists? %>
+      <%= link_to 'Anular inscripción', unregister_event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block'%>
+      <% else %>
+      <%= link_to 'Inscribirse', register_event_path(event), class: 'btn btn-dark btn-sm btn-lg btn-block'%>
+      <% end %>
+      
       <%= link_to 'Mostrar', event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
+     
     </div>
   </li>
   <% end %>

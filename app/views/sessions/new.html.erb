@@ -1,13 +1,22 @@
-<h1>Ingresar</h1>
+<div class="focuded_content">
+	<div class="show_core_container">
+		<div class="tag_index">
+			Ingresar
+		</div>
 
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Ingresar" %></div>
-<% end %>
+		<%= form_tag sessions_path do %>
+
+		<div class="form_group">
+			<%= label_tag :email %><br>
+			<%= text_field_tag :email, params[:email], class: 'form-control' %> <br>
+		</div>
+		<div class="form_group">
+			<%= label_tag :password %> <br>
+			<%= password_field_tag :password, class: 'form-control'%>
+		</div>
+		<div class="button_align_right">
+			<%= submit_tag "Ingresar",  class: "btn btn-dark"%>
+		</div>
+		<% end %>
+	</div>
+</div>

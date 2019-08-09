@@ -6,11 +6,11 @@ class Event < ApplicationRecord
 	
 	validates :name, :place, :start_hour, :end_hour, :description, :event_date,
 	 :max_capacity, :speakers, presence: true
-	# validates :speakers, format: { with: /\A[a-zA-Z]+\z/}
-	# validates :name, length: { maximum: 30 }
-	# validates :place, length: { maximum: 30 }
-	# validates :name, uniqueness: true
-	# validates :description, length: { in: 50..300 }
+	validates :speakers, format: { with: /\A[a-zA-Z]+\z/}
+	validates :name, length: { in: 4..30 }
+	validates :place, length: { maximum: 30 }
+	validates :name, uniqueness: true
+	validates :description, length: { in: 20..300 }
 
 	validates :max_capacity, numericality: { only_integer: true, minimum:0 }
 

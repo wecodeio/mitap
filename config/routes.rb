@@ -10,6 +10,10 @@ Rails.application.routes.draw do
      resources :event_groups 
    end
 
+   namespace :admin do
+     resources :registrations 
+   end
+
    resources :events, only: [:index, :show]  do
      get :register, on: :member
      get :unregister, on: :member

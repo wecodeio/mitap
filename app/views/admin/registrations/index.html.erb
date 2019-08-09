@@ -1,0 +1,21 @@
+<div class="tag_index">
+  <h5>Inscriptos por evento</h5>
+</div>
+<div class="notice_index">
+  <p id="notice"><%= notice %></p>
+</div>
+<ul class="list-group">
+  <% @events.each do |event| %>
+  <li class="list-group-item">
+    <div class="left_container">
+      <div class="form-group">
+        <h5 class="inscription-list"><%= event.name %> - </h5>
+        <p class="inscription-list">Fecha: <%= event.event_date %> - </p>
+        <p class="inscription-list">Lugar: <%= event.place %> - </p>
+        <p class="inscription-list">Grupo de evento: <%= event.event_group.try(:name) %></p>
+        <%= link_to 'Mostrar inscriptos', admin_registration_path(event), class: 'btn btn-light btn-sm btn-lg btn-block'%>
+      </div>
+    </div>
+  </li>
+ <% end %>
+</ul>

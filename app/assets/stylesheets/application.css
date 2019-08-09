@@ -86,3 +86,11 @@
 	width: 60%;
 	border-radius: 10%;
 }
+
+.inscription-list{
+	display: inline-block;
+}
+
+.inscription-list-group{
+	background-color: #D5D5D5;
+}

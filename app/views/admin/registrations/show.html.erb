@@ -1,0 +1,26 @@
+<div class="show_container">
+    <div class="show_core_container">
+        <p id="notice"><%= notice %></p>
+        <div class="form-group">
+            <label>Listado de inscriptos:</label>
+            <div class="show_container_target">
+                <ul class="list-group">
+                  <% @event.users.each do |user| %>
+                  <li class="list-group-item">
+                    <div class="left_container">
+                      <div class="form-group">
+                        <h5 class="inscription-list"><%= user.email %> - </h5>
+                      </div>
+                    </div>
+                  </li>
+                 <% end %>
+                </ul>
+                
+            </div>
+       </div>
+   </div>
+</div>
+
+<div class="button_align_right">
+    <%= link_to 'Atras', admin_registrations_path, class: 'btn btn-secondary'%>
+</div>

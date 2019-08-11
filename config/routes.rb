@@ -11,7 +11,9 @@ Rails.application.routes.draw do
    end
 
    namespace :admin do
-     resources :registrations 
+     resources :registrations do
+     post :send_email, on: :member
+    end
    end
 
    resources :events, only: [:index, :show]  do

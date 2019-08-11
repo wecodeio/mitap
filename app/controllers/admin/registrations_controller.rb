@@ -10,6 +10,12 @@ class Admin::RegistrationsController < Admin::BaseController
     @event = Event.find(params[:id])
   end
 
+  def send_email
+    UserMailer.with(email: params[:email]).reminder_email.deliver_now
+    redirect_to admin_registration_path
+    flash.alert = "Email enviado correctamente"
+  end
+
   private
     
     def registration_params

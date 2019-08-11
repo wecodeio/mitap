@@ -32,3 +32,6 @@
 
 /config/database.yml
 .env
+
+/config/local_env.yml
+

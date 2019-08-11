@@ -14,7 +14,7 @@
       </div>
       <div class="form-group">
         <p>Fecha: <%= event.event_date %></p>
-        <p>Horario: <%= event.start_hour %> a <%= event.end_hour %>.</p>
+        <p>Horario: <%= event.start_hour.to_formatted_s(:time) %> a <%= event.end_hour.to_formatted_s(:time) %>.</p>
         <p>Lugar: <%= event.place %>. </p>
         <p>Grupo del evento: <%= event.event_group.try(:name) %></p>
       </div>

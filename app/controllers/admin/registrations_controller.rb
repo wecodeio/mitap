@@ -1,6 +1,5 @@
 class Admin::RegistrationsController < Admin::BaseController
-  #before_action :set_registration, only: [:show, :edit]
-
+  
   def index
     @registrations = Registration.all
     @events = Event.all
@@ -13,12 +12,6 @@ class Admin::RegistrationsController < Admin::BaseController
 
   private
     
-    #def set_registration
-    #  if Registration.where("event = ?", params[:event_id])
-     #     registration_params[:id]        
-      #end 
-    #end
-
     def registration_params
       params.fetch(:registration, {}).permit(:id)
     end

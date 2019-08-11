@@ -59,6 +59,6 @@
     <% if Registration.where(user: current_user, event: Event.find(params[:id])).exists? %>
         <%= link_to 'Anular inscripción', unregister_event_path(@event), class: 'btn btn-light'%>
     <% else %>
-        <%= link_to 'Inscribirse', register_event_path(@event), class: 'btn btn-light'%>
+        <%= link_to 'Inscribirse', register_event_path(@event), class: 'btn btn-dark'%>
     <% end %>
 </div>

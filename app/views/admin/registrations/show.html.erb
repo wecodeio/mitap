@@ -1,26 +1,30 @@
+<div class="tag_index">
+  <h5>Listado de inscriptos del evento "<%= @event.name%>"</h5>
+</div>
+
 <div class="show_container">
-    <div class="show_core_container">
-        <p id="notice"><%= notice %></p>
-        <div class="form-group">
-            <label>Listado de inscriptos:</label>
-            <div class="show_container_target">
-                <ul class="list-group">
-                  <% @event.users.each do |user| %>
-                  <li class="list-group-item">
-                    <div class="left_container">
-                      <div class="form-group">
-                        <h5 class="inscription-list"><%= user.email %> - </h5>
-                      </div>
-                    </div>
-                  </li>
-                 <% end %>
-                </ul>
-                
+  <div class="show_core_container">
+    <div class="alert alert-light" role="alert">
+      <%= notice %>
+    </div>
+
+
+    <div class="form-group">
+      <ul class="list-group">
+        <% @event.users.each do |user| %>
+        <li class="list-group-item">
+          <div class="left_container">
+            <div class="form-group">
+              <h5 class="inscription-list"><%= user.email %> - </h5>
             </div>
-       </div>
-   </div>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="button_align_right">
-    <%= link_to 'Atras', admin_registrations_path, class: 'btn btn-secondary'%>
+  <%= link_to 'Atras', admin_events_path, class: 'btn btn-secondary'%>
 </div>

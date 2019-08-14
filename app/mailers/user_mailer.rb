@@ -1,9 +1,9 @@
 class UserMailer < ApplicationMailer
-
+  
   def reminder_email
-    UserMailer.with(email: params[:email]).reminder_email.deliver_now
-    redirect_to admin_registration_path
-    flash.alert = "Email enviado correctamente"
+     @user = params[:email]
+     @url  = 'http://mitap.wecode.io/login'
+     mail(to: @user, subject: 'Confirmación de inscripción al evento')
   end
 
 end

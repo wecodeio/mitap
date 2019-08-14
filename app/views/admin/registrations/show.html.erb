@@ -13,7 +13,7 @@
             <% @event.users.each do |user| %>
             <li class="list-group-item">
               <p><%= user.email %></p>
-              <%= button_to "Enviar recordatorio", { action: "send_email", email: user.email }, method: :post %>
+              <%= button_to "Enviar recordatorio", { action: "reminder_email", email: user.email }, method: :post %>
             </li>
             <% end %>
           </ul>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
    namespace :admin do
      resources :registrations do
-     post :send_email, on: :member
+     post :reminder_email, on: :member
     end
    end
 

@@ -1,5 +1,5 @@
 <div class="tag_index">
-  Próximos eventos
+  <h5>Próximos eventos</h5>
 </div>
 <div class="alert alert-light" role="alert">
   <%= notice %>
@@ -13,12 +13,13 @@
         <h5><%= event.name %></h5>
       </div>
       <div class="form-group">
-        <p>Fecha: <%= event.event_date %></p>
+        <p>Fecha: <%= I18n.l @event.event_date, format: '%A, %d de %B de %Y' %></p>
         <p>Horario: <%= event.start_hour.to_formatted_s(:time) %> a <%= event.end_hour.to_formatted_s(:time) %>.</p>
         <p>Lugar: <%= event.place %>. </p>
         <p>Grupo del evento: <%= event.event_group.try(:name) %></p>
       </div>
     </div>
+    
     <div class="right_container">
 
       <% if Registration.where(user: current_user, event: event.id).exists? %>

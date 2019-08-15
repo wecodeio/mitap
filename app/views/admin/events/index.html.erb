@@ -12,8 +12,8 @@
         <h5><%= event.name %></h5>
       </div>
       <div class="form-group">
-        <p>Fecha: <%= event.event_date %></p>
-        <p>Horario: <%= event.start_hour %> a <%= event.end_hour %>.</p>
+        <p>Fecha: <%= I18n.l event.event_date, format: '%A, %d de %B de %Y' %></p>
+        <p>Horario: <%= event.start_hour.to_formatted_s(:time) %> a <%= event.end_hour.to_formatted_s(:time) %>.</p>
         <p>Lugar: <%= event.place %>. </p>
         <p>Grupo de evento: <%= event.event_group.try(:name) %></p>
       </div>

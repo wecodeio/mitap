@@ -13,6 +13,7 @@ Rails.application.routes.draw do
    namespace :admin do
      resources :registrations do
      post :reminder_email, on: :member
+     post :inscription_email, on: :member
     end
    end
 

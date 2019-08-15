@@ -86,3 +86,7 @@
 	width: 60%;
 	border-radius: 10%;
 }
+
+.button_to{
+	display: inline;
+}

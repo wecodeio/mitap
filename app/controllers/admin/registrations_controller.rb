@@ -11,13 +11,13 @@ class Admin::RegistrationsController < Admin::BaseController
   end
 
   def reminder_email
-    UserMailer.with(email: params[:email]).reminder_email.deliver_now
+    UserMailer.with(email: params[:email], id: params[:id]).reminder_email.deliver_now
     redirect_to admin_registration_path
     flash.alert = "Email enviado correctamente"
   end
 
   def inscription_email
-    UserMailer.with(email: params[:email]).inscription_email.deliver_now
+    UserMailer.with(email: params[:email], id: params[:id]).inscription_email.deliver_now
     redirect_to admin_registration_path
     flash.alert = "Email enviado correctamente"
   end

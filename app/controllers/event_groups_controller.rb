@@ -46,4 +46,6 @@ class EventGroupsController < ApplicationController
     end
   end
 
+  
+
 end

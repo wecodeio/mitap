@@ -8,6 +8,7 @@ class Admin::RegistrationsController < Admin::BaseController
 
   def show
     @event = Event.find(params[:id])
+    @event_group = EventGroup.find(params[:id])
   end
 
   def reminder_email

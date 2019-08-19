@@ -14,4 +14,11 @@ class UserMailer < ApplicationMailer
     mail(to: @user, subject: 'Confirmación de inscripción al evento')
   end
 
+  def newEvent_email
+    @user = params[:email]
+    @url  = 'http://mitap.wecode.io/login'
+    
+    mail(to: @user, subject: 'Nuevo evento creado en su grupo de interés')
+  end
+
 end

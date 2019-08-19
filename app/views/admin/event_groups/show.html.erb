@@ -14,6 +14,24 @@
  </div>
 </div>
 
+<div class="tag_index">
+  <h5>Listado de inscriptos al grupo</h5>
+</div>
+<div class="show_container">
+  <div class="show_core_container">
+      <div class="form-group text-center">
+        <ul class="list-group">
+          <% @event_group.users.each do |user| %>
+          <li class="list-group-item">
+            <p><%= user.email %></p>
+            <%= button_to "Nuevo evento", { action: "newEvent_email", email: user.email }, method: :post %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+</div>
+
 <div class="button_align_right">
   <%= link_to 'Atras', admin_event_groups_path, class: 'btn btn-secondary'%>
 </div>

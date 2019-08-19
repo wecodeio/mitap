@@ -44,8 +44,8 @@
     <%= link_to 'Atras', event_groups_path, class: 'btn btn-secondary'%>
 
     <% if RegistrationGroup.where(user: current_user, event_group: EventGroup.find(params[:id])).exists? %>
-    <%= link_to 'Anular inscripción', unregister_event_group_path, class: 'btn btn-light'%>
+    <%= link_to 'Anular inscripción al grupo', unregister_event_group_path, class: 'btn btn-light'%>
     <% else %>
-    <%= link_to 'Inscribirse', register_event_group_path, class: 'btn btn-light'%>
+    <%= link_to 'Inscribirse al grupo', register_event_group_path, class: 'btn btn-light'%>
     <% end %>
 </div>

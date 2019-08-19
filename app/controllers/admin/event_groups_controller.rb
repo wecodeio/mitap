@@ -6,6 +6,9 @@ class Admin::EventGroupsController < Admin::BaseController
   end
 
   def show
+    @event_groups = EventGroup.all
+    @event_group = EventGroup.find(params[:id])
+    @registrations = Registration.all
   end
   
   def new
@@ -14,6 +17,13 @@ class Admin::EventGroupsController < Admin::BaseController
   
   def edit
   end
+
+  def newEvent_email
+      UserMailer.with(email: params[:email],).newEvent_email.deliver_now
+      redirect_to admin_event_group_path
+      flash.alert = "Email enviado correctamente"
+  end
+  
   
   def create
     @event_group = EventGroup.new(event_group_params)
@@ -55,5 +65,9 @@ class Admin::EventGroupsController < Admin::BaseController
 
     def event_group_params
       params.fetch(:event_group, {}).permit(:name)
+    end
+
+    def registration_params
+      params.fetch(:registration, {}).permit(:id)
     end
 end

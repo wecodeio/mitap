@@ -1,64 +1,66 @@
 <div class="show_container">
     <div class="show_core_container">
-         <div class="form-group">
-            <label>Nombre del evento:</label>
-            <div class="show_container_target">
-             <h5>
-                 <%= @event.name  %>
-             </h5> 
-         </div>
-     </div>
-     <div class="form-group">
-        <label>Fecha:</label>
-        <div class="show_container_target">
-            <%= I18n.l @event.event_date, format: '%A, %d de %B de %Y'  %>
-        </div>
-    </div>
-    <div class="form-group">
-        <label>Hora de comienzo:</label>
-        <div class="show_container_target">
-            <%= @event.start_hour.to_formatted_s(:time) %>
-        </div>
-    </div>
-    <div class="form-group">
-        <label>Hora de final:</label>
-        <div class="show_container_target">
-            <%= @event.end_hour.to_formatted_s(:time) %>
-        </div>
-    </div>
-    <div class="form-group">
-        <label>Descripción del evento:</label>
-        <div class="show_container_target">
-            <%= @event.description %>
-        </div>
         <div class="form-group">
+            <div class="show_container_target text-center show-eg">
+                <label>Nombre del evento:</label>
+                <div class="show_container_target">
+                    <h5>
+                        <%= @event.name  %>
+                    </h5> 
+                </div>
+            </div>
         </div>
-        <label>Capacidad:</label>
-        <div class="show_container_target">
-            <%= @event.max_capacity %>
+        <div class="list-group-item form-group">
+            <label>Fecha:</label>
+            <div class="show_container_target">
+                <%= I18n.l @event.event_date, format: '%A, %d de %B de %Y'  %>
+            </div>
+        </div>
+        <div class="list-group-item form-group">
+            <label>Hora de comienzo:</label>
+            <div class="show_container_target">
+                <%= @event.start_hour.to_formatted_s(:time) %>
+            </div>
+        </div>
+        <div class="list-group-item form-group">
+            <label>Hora de final:</label>
+            <div class="show_container_target">
+                <%= @event.end_hour.to_formatted_s(:time) %>
+            </div>
+        </div>
+        <div class="list-group-item form-group">
+            <label>Descripción del evento:</label>
+            <div class="show_container_target">
+                <%= @event.description %>
+            </div>
+        </div>
+        <div class="list-group-item form-group">
+            <label>Capacidad:</label>
+            <div class="show_container_target">
+                <%= @event.max_capacity %>
+            </div>
+        </div>
+        <div class="list-group-item form-group">
+            <label>Descripción del evento:</label>
+            <div class="show_container_target">
+                <%= @event.place %>
+            </div>
+        </div>
+         <div class="list-group-item form-group">
+            <label>Grupo del evento</label>
+            <div class="show_container_target">
+                <%= @event.event_group.try(:name) %>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <label>Descripción del evento:</label>
-        <div class="show_container_target">
-            <%= @event.place %>
-        </div>
-    </div>
-     <div class="form-group">
-        <label>Grupo del evento</label>
-        <div class="show_container_target">
-            <%= @event.event_group.try(:name) %>
-        </div>
-    </div>
-</div>
 </div>
 
 <div class="button_align_right">
-    <%= link_to 'Atras', events_path, class: 'btn btn-secondary'%>
+    <%= link_to 'Atras', events_path, class: 'button-show btn'%>
 
     <% if Registration.where(user: current_user, event: Event.find(params[:id])).exists? %>
-        <%= link_to 'Anular inscripción', unregister_event_path(@event), class: 'btn btn-light'%>
+        <%= link_to 'Anular inscripción', unregister_event_path(@event), class: 'button-unr btn'%>
     <% else %>
-        <%= link_to 'Inscribirse', register_event_path(@event), class: 'btn btn-dark'%>
+        <%= link_to 'Inscribirse', register_event_path(@event), class: 'button btn'%>
     <% end %>
 </div>

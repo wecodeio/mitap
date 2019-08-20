@@ -15,37 +15,35 @@
  */
 
 .background_design{
-	background-color: rgb(215, 88, 10);
+	background-color: rgb(255, 255, 255);
 	min-height: 30em;
 }
 .footer{
-	position: relative;
-	text-align: center;
-	background-color: #ffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #025951;
+	color: #FFF;
+	height: 3em;
 }
 .main_container{
-	width: 90%;
+	width: 100%;
 	min-height: 29.4em;
 	margin: auto;
 }
 
 .yield_container{
-	background-color: rgba(2, 35, 22, 0.2);
-	opacity: 20%;
-	padding-left: 2%;
-	padding-right: 2%;
-	margin-top: 2em;
-	margin-bottom: 2em;
+	background-color: #FFF;
+	width: 100%;
 }
+
 .yield_core_container{
-	padding-top: 0.6em;
-	padding-bottom: 0.1rem;
+	
 }
 
 .button_align_right{
 	text-align: right; 
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding: 1em 2em;
 }
 
 .form_end_container_error{
@@ -59,23 +57,22 @@
 	background-color: #ffff;
 }
 .show_core_container{
-	padding: 1em;
+	padding: 3em 2.5em 0 2.5em;
 }
 
 .show_container_target{
-	text-align: right;
-	float: right;
+	justify-content: center;
+	align-items: center;
 }
 
 .tag_index{
-	background-color: #ffff;
-	border-bottom-left-radius: 70%;
-	border-top-right-radius: 70%;
-	text-align: center;
-	margin-bottom: 0.5em;
-	margin-top: 0.5em;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	background-color: #025951;
+	color: #fff;
+	margin: 0.5em 0;
+	padding: 1em 0;
+	height: 10em;
+	align-items: center;
+	justify-content: center;
 }
 
 .focuded_content{
@@ -90,3 +87,72 @@
 .button_to{
 	display: inline;
 }
+
+.button{
+	background-color: #02735E;
+	color: #fff;
+}
+
+.button:hover{
+	color: #fff;
+	background-color: #04957A;
+}
+
+.button-unr{
+	background-color: #04957A;
+	color: #fff;
+}
+
+.button-unr:hover{
+	color: #fff;
+	background-color: #02735E;
+}
+
+.button-show{
+	color: #fff;
+	background-color: #8C496E;
+}
+
+.button-show:hover{
+	color: #fff;
+	background-color: #BEBFB4;
+}
+
+.list-group{
+	width: 80%;
+	margin: auto;
+}
+
+.index-h5{
+	background-color: #E8E8E5;
+	margin-right: 0.3em;
+	height: 1.5em;
+	padding-left: 0.3em; 
+	border-radius: 0.2em;
+}
+
+.show-eg{
+	background-color: #025951;
+	color: #fff;
+	padding: 1em;
+	font-size: 1.3em;
+}
+
+.font-group{
+	font-size: 1.2em;
+	background-color: #E8E8E5;
+	margin-right: 0.3em;
+	height: 1.6em;
+	border-radius: 0.2em;
+	padding-left: 0.3em; 
+
+}
+
+/* Color Theme Swatches in Hex 
+ { color: #8C496E; }
+ { color: #025951; }
+ { color: #02735E; }
+ { color: #04957A; }
+ { color: #BEBFB4; }*/
+
+

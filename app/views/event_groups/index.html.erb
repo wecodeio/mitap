@@ -1,21 +1,17 @@
-<div class="tag_index">
-  <h5>Grupos</h5>
-</div>
-
-<div class="alert alert-light" role="alert">
-  <%= notice %>
+<div class="tag_index d-flex">
+  <h2>Grupos existentes</h2>
 </div>
 
 <ul class="list-group">
   <% @event_groups.each do |group| %>
   <li class="list-group-item">
     <div class="left_container">
-      <div class="form-group">
+      <div class="form-group font-group">
         <%= group.name %>
       </div>
     </div>
     <div class="right_container">
-      <%= link_to 'Mostrar', event_group_path(group), class: 'btn btn-light btn-sm btn-lg btn-block' %>
+      <%= link_to 'Mostrar', event_group_path(group), class: 'button-show btn btn-sm btn-lg btn-block' %>
     </div>
   </li>
   <% end %>

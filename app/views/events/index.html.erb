@@ -1,8 +1,5 @@
-<div class="tag_index">
-  <h5>Próximos eventos</h5>
-</div>
-<div class="alert alert-light" role="alert">
-  <%= notice %>
+<div class="tag_index d-flex">
+  <h2>Próximos eventos</h2>
 </div>
 
 <ul class="list-group">
@@ -10,7 +7,7 @@
   <li class="list-group-item">
     <div class="left_container">
       <div class="form-group">
-        <h5><%= event.name %></h5>
+        <h5 class="index-h5"><%= event.name %></h5>
       </div>
       <div class="form-group">
         <p>Fecha: <%= I18n.l event.event_date, format: '%A, %d de %B de %Y' %></p>
@@ -21,14 +18,15 @@
     </div>
     
     <div class="right_container">
-
+      <%= link_to 'Mostrar', event_path(event), class: 'button-show btn btn-sm btn-lg btn-block' %>
+      
       <% if Registration.where(user: current_user, event: event.id).exists? %>
-      <%= link_to 'Anular inscripción', unregister_event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block'%>
+      <%= link_to 'Anular inscripción', unregister_event_path(event), class: 'button-unr btn btn-sm btn-lg btn-block'%>
       <% else %>
-      <%= link_to 'Inscribirse', register_event_path(event), class: 'btn btn-dark btn-sm btn-lg btn-block'%>
+      <%= link_to 'Inscribirse', register_event_path(event), class: 'button btn btn-sm btn-lg btn-block'%>
       <% end %>
       
-      <%= link_to 'Mostrar', event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
+      
      
     </div>
   </li>

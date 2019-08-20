@@ -1,51 +1,46 @@
 <div class="show_container">
+    
     <div class="show_core_container">
-        <div class="alert alert-light" role="alert">
-          <%= notice %>
-      </div>
-      <div class="form-group">
-        <label>Grupo</label>
-        <div class="show_container_target">
-            <h4>
+        <div class="form-group">
+            <div class="show_container_target text-center show-eg">
+              <p class="d-inline">Grupo</p>
+              <h4 class="d-inline ml-1">
                 <%= @event_group.name  %>
-            </h4> 
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label>Eventos relacionados al grupo</label>
-    </div>
-
-    <ul class="list-group">
-        <% @events.each do |event| %>
-        <% if event.event_group_id == @event_group.id%>
-        <li class="list-group-item">
-         <div class="left_container">
-            <div class="form-group">
-                <h5><%= event.name %></h5>
-            </div>
-            <div class="form-group">
-                <p>Fecha: <%= event.event_date %></p>
-                <p>Horario: <%= event.start_hour %> a <%= event.end_hour %>.</p>
-                <p>Lugar: <%= event.place %>. </p>
+              </h4>
+              <p>Eventos relacionados al grupo</p>
             </div>
         </div>
-        <div class="right_container">
-            <%= link_to 'Mostrar', event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
-        </div>
-    </li>
-    <% end %>
-    <% end %>
-</ul>
-</div>
+
+        <ul class="list-group">
+            <% @events.each do |event| %>
+            <% if event.event_group_id == @event_group.id%>
+            <li class="list-group-item">
+                <div class="left_container">
+                    <div class="form-group">
+                        <h5><%= event.name %></h5>
+                    </div>
+                    <div class="form-group">
+                        <p>Fecha: <%= event.event_date %></p>
+                        <p>Horario: <%= event.start_hour %> a <%= event.end_hour %>.</p>
+                        <p>Lugar: <%= event.place %>. </p>
+                    </div>
+                </div>
+                <div class="right_container">
+                    <%= link_to 'Mostrar', event_path(event), class: 'button-show btn btn-sm btn-lg btn-block' %>
+                </div>
+            </li>
+            <% end %>
+            <% end %>
+        </ul>
+    </div>
 </div>
 
 <div class="button_align_right">
-    <%= link_to 'Atras', event_groups_path, class: 'btn btn-secondary'%>
+    <%= link_to 'Atras', event_groups_path, class: 'button-show btn'%>
 
     <% if RegistrationGroup.where(user: current_user, event_group: EventGroup.find(params[:id])).exists? %>
-    <%= link_to 'Anular inscripción al grupo', unregister_event_group_path, class: 'btn btn-light'%>
+    <%= link_to 'Anular inscripción al grupo', unregister_event_group_path, class: 'button-unr btn'%>
     <% else %>
-    <%= link_to 'Inscribirse al grupo', register_event_group_path, class: 'btn btn-light'%>
+    <%= link_to 'Inscribirse al grupo', register_event_group_path, class: 'button btn'%>
     <% end %>
 </div>

@@ -14,6 +14,7 @@
               <div class="flex-row"> 
                 <%= button_to "Enviar confirmación", { action: "inscription_email", email: user.email, name: @event.name }, method: :post %>
                 <%= button_to "Enviar recordatorio", { action: "reminder_email", email: user.email, name: @event.name }, method: :post %>
+                <%= button_to "Enviar recordatorio", { action: "novedades_email", email: user.email, name: @event.name }, method: :post %>
               </div>
             </li>
             <% end %>

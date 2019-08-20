@@ -17,8 +17,14 @@ class UserMailer < ApplicationMailer
   def newEvent_email
     @user = params[:email]
     @url  = 'http://mitap.wecode.io/login'
-    
     mail(to: @user, subject: 'Nuevo evento creado en su grupo de interés')
+  end
+
+  def novedades_email
+    @user = params[:email]
+    @url  = 'http://mitap.wecode.io/login'
+    @event = Event.find(params[:id]).name
+    mail(to: @user, subject: 'Novedades en el grupo de eventos')
   end
 
 end

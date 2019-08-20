@@ -23,6 +23,12 @@ class Admin::RegistrationsController < Admin::BaseController
     flash.alert = "Email enviado correctamente"
   end
 
+  def novedades_email
+    UserMailer.with(email: params[:email], id: params[:id]).novedades_email.deliver_now
+    redirect_to admin_registration_path
+    flash.alert = "Email enviado correctamente"
+  end
+
   private
     
     def registration_params

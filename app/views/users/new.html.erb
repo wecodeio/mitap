@@ -1,7 +1,7 @@
 <div class="focuded_content">
-  <div class="show_core_container">
-    <div class="tag_index">
-      Registrarse
+  <div class="show_core_container_logue">
+    <div class="tag_index_logue d-flex">
+      <h4>Registrarse</h4>
     </div>
     <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
@@ -28,8 +28,8 @@
       <%= f.password_field :password_confirmation, class: 'form_control'%>
     </div>
 
-    <div class="button_align_right">
-      <%= f.submit "Registrarse",  class: "btn btn-dark"%>
+    <div class="button_align_right_logue">
+      <%= f.submit "Registrarse",  class: "button btn"%>
     </div>
 
 

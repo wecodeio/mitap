@@ -44,6 +44,12 @@
 .button_align_right{
 	text-align: right; 
 	padding: 1em 2em;
+	margin-right: 6.5em;
+}
+
+.button_align_right_logue{
+	text-align: right; 
+	padding: 1em 0;
 }
 
 .form_end_container_error{
@@ -60,9 +66,21 @@
 	padding: 3em 2.5em 0 2.5em;
 }
 
+.show_core_container_logue{
+	margin-top: 2em;
+	border-radius: 0.25em;
+	background-color: #BEBFB4;
+	padding: 3em 2.5em 0 2.5em;
+}
+
+.show_core_container_reg{
+	padding: 1em 2.5em 0 2.5em;
+}
+
 .show_container_target{
 	justify-content: center;
 	align-items: center;
+	border-radius: 0.25rem;
 }
 
 .tag_index{
@@ -73,6 +91,17 @@
 	height: 10em;
 	align-items: center;
 	justify-content: center;
+}
+
+.tag_index_logue{
+	background-color: #025951;
+	color: #fff;
+	margin: 0.5em 0;
+	padding: 1em 0;
+	height: 5em;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.25rem;
 }
 
 .focuded_content{
@@ -118,6 +147,16 @@
 	background-color: #BEBFB4;
 }
 
+.button-ins{
+	color: #fff;
+	background-color: #8F908B;
+}
+
+.button-ins:hover{
+	color: #fff;
+	background-color: #BEBFB4;
+}
+
 .list-group{
 	width: 80%;
 	margin: auto;
@@ -145,8 +184,17 @@
 	height: 1.6em;
 	border-radius: 0.2em;
 	padding-left: 0.3em; 
-
 }
+
+.title-ins{
+	background-color: #02735E;
+	height: 5em;
+}
+
+.edit{
+	padding-left: 2em;
+}
+
 
 /* Color Theme Swatches in Hex 
  { color: #8C496E; }

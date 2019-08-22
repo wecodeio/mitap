@@ -1,7 +1,7 @@
 <div class="focuded_content">
-	<div class="show_core_container">
-		<div class="tag_index">
-			Ingresar
+	<div class="show_core_container_logue">
+		<div class="tag_index_logue d-flex">
+			<h4>Ingresar</h4>
 		</div>
 
 		<%= form_tag sessions_path do %>
@@ -14,8 +14,8 @@
 			<%= label_tag :password %> <br>
 			<%= password_field_tag :password, class: 'form-control'%>
 		</div>
-		<div class="button_align_right">
-			<%= submit_tag "Ingresar",  class: "btn btn-dark"%>
+		<div class="button_align_right_logue">
+			<%= submit_tag "Ingresar",  class: "button btn"%>
 		</div>
 		<% end %>
 	</div>

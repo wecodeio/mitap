@@ -1,5 +1,5 @@
-<div class="tag_index">
-  <h5>Eventos existentes</h5>
+<div class="tag_index d-flex">
+  <h4>Eventos existentes</h4>
 </div>
 <div class="alert alert-light" role="alert">
   <%= notice %>
@@ -9,7 +9,7 @@
   <li class="list-group-item">
     <div class="left_container">
       <div class="form-group">
-        <h5><%= event.name %></h5>
+        <h5 class="index-h5"><%= event.name %></h5>
       </div>
       <div class="form-group">
         <p>Fecha: <%= I18n.l event.event_date, format: '%A, %d de %B de %Y' %></p>
@@ -19,15 +19,15 @@
       </div>
     </div>
     <div class="right_container">
-      <%= link_to 'Mostrar', admin_event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block'%>
-      <%= link_to 'Editar', edit_admin_event_path(event), class: 'btn btn-light btn-sm btn-lg btn-block' %>
-      <%= link_to 'Borrar', admin_event_path(event), method: :delete, data: { confirm: 'Estás seguro que querés eliminar el evento de la lista?' }, class: 'btn btn-light btn-sm btn-lg btn-block' %>
-      <%= link_to 'Mostrar inscriptos', admin_registration_path(event), class: 'btn btn-light btn-sm btn-lg btn-block'%>
+      <%= link_to 'Mostrar', admin_event_path(event), class: 'button-show btn btn-sm btn-lg btn-block'%>
+      <%= link_to 'Editar', edit_admin_event_path(event), class: 'button-unr btn btn-sm btn-lg btn-block' %>
+      <%= link_to 'Borrar', admin_event_path(event), method: :delete, data: { confirm: 'Estás seguro que querés eliminar el evento de la lista?' }, class: 'button-unr btn btn-sm btn-lg btn-block' %>
+      <%= link_to 'Mostrar inscriptos', admin_registration_path(event), class: 'button-ins btn btn-sm btn-lg btn-block'%>
     </div>
   </li>
   <% end %>
 </ul>
 
 <div class="button_align_right">
-  <%= link_to 'Nuevo evento', new_admin_event_path, class: 'btn btn-dark' %>
+  <%= link_to 'Crear Nuevo Evento', new_admin_event_path, class: 'button btn' %>
 </div>

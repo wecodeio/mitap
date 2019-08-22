@@ -1,23 +1,18 @@
 <div class="show_container">
   <div class="show_core_container">
-    <div class="alert alert-light" role="alert">
-     <%= notice %>
-    </div>
     <div class="form-group">
-      <label>Nombre del grupo de evento:</label>
-      <div class="show_container_target">
-       <h5>
+      <div class="show_container_target text-center show-eg">
+        <p class="d-inline">Nombre del grupo de evento:</p>
+       <h4>
          <%= @event_group.name  %>
-       </h5> 
+       </h4> 
+     </div>
+     <div class="show_container_target tag_index text-center title-ins">
+      <h5>Listado de inscriptos al grupo</h5>
      </div>
    </div>
  </div>
-</div>
 
-<div class="tag_index">
-  <h5>Listado de inscriptos al grupo</h5>
-</div>
-<div class="show_container">
   <div class="show_core_container">
       <div class="form-group text-center">
         <ul class="list-group">
@@ -33,5 +28,5 @@
 </div>
 
 <div class="button_align_right">
-  <%= link_to 'Atras', admin_event_groups_path, class: 'btn btn-secondary'%>
+  <%= link_to 'Atras', admin_event_groups_path, class: 'button-show btn'%>
 </div>

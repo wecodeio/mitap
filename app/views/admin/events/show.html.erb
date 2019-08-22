@@ -1,54 +1,51 @@
 <div class="show_container">
     <div class="show_core_container">
-        <div class="alert alert-light" role="alert">
-          <%= notice %>
-      </div>
       <div class="form-group">
-        <label>Nombre del evento:</label>
-        <div class="show_container_target">
-           <h5>
+        <div class="show_container_target text-center show-eg">
+           <p class="d-inline">Nombre del evento:</p>
+           <h4>
                <%= @event.name  %>
-           </h5> 
-       </div>
-   </div>
+           </h4> 
+        </div>
+      </div>
    
-   <div class="form-group">
+   <div class="list-group-item form-group">
     <label>Fecha:</label>
     <div class="show_container_target">
         <%= I18n.l @event.event_date, format: '%A, %d de %B de %Y'  %>
     </div>
 </div>
-<div class="form-group">
+<div class="list-group-item form-group">
     <label>Hora de comienzo:</label>
     <div class="show_container_target">
         <%= @event.start_hour.to_formatted_s(:time) %>
     </div>
 </div>
-<div class="form-group">
+<div class="list-group-item form-group">
     <label>Hora de final:</label>
     <div class="show_container_target">
         <%= @event.end_hour.to_formatted_s(:time) %>
     </div>
 </div>
-<div class="form-group">
+<div class="list-group-item form-group">
     <label>Descripción del evento:</label>
     <div class="show_container_target">
         <%= @event.description %>
     </div>
-    <div class="form-group">
-    </div>
+</div>
+<div class="list-group-item form-group">
     <label>Capacidad:</label>
     <div class="show_container_target">
         <%= @event.max_capacity %>
     </div>
 </div>
-<div class="form-group">
+<div class="list-group-item form-group">
     <label>Descripción del evento:</label>
     <div class="show_container_target">
         <%= @event.place %>
     </div>
 </div>
-<div class="form-group">
+<div class="list-group-item form-group">
     <label>Grupo del evento</label>
     <div class="show_container_target">
         <%= @event.event_group.try(:name) %>
@@ -58,5 +55,5 @@
 </div>
 
 <div class="button_align_right">
-    <%= link_to 'Atras', admin_events_path, class: 'btn btn-secondary'%>
+    <%= link_to 'Atras', admin_events_path, class: 'button-show btn'%>
 </div>

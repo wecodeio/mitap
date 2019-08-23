@@ -13,29 +13,29 @@
 
         <ul class="list-group">
             <% @events.each do |event| %>
-            <% if event.event_group_id == @event_group.id%>
-            <li class="list-group-item">
-                <div class="left_container">
-                    <div class="form-group">
-                        <h5><%= event.name %></h5>
+                <% if event.event_group_id == @event_group.id%>
+                <li class="list-group-item">
+                    <div class="left_container">
+                        <div class="form-group">
+                            <h5><%= event.name %></h5>
+                        </div>
+                        <div class="form-group">
+                            <p>Fecha: <%= I18n.l event.event_date, format: '%A, %d de %B de %Y' %></p>
+                            <p>Horario: <%= event.start_hour.to_formatted_s(:time) %> a <%= event.end_hour.to_formatted_s(:time) %>.</p>
+                            <p>Lugar: <%= event.place %>. </p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <p>Fecha: <%= event.event_date %></p>
-                        <p>Horario: <%= event.start_hour %> a <%= event.end_hour %>.</p>
-                        <p>Lugar: <%= event.place %>. </p>
+                    <div class="right_container">
+                        <%= link_to 'Mostrar', event_path(event), class: 'button-show btn btn-sm btn-lg btn-block' %>
                     </div>
-                </div>
-                <div class="right_container">
-                    <%= link_to 'Mostrar', event_path(event), class: 'button-show btn btn-sm btn-lg btn-block' %>
-                </div>
-            </li>
-            <% end %>
+                </li>
+                <% end %>
             <% end %>
         </ul>
     </div>
 </div>
 
-<div class="button_align_right">
+<div class="button_align_right_groups">
     <%= link_to 'Atras', event_groups_path, class: 'button-show btn'%>
 
     <% if RegistrationGroup.where(user: current_user, event_group: EventGroup.find(params[:id])).exists? %>

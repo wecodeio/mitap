@@ -1,6 +1,19 @@
 <div class="tag_index d-flex">
-  <h5>Próximos eventos</h5>
+  <h3>Próximos eventos</h3>
 </div>
+
+<div class="my-2 show_container_search">
+  <%= form_tag "search/crate", method: :get do %>
+    <%= select("post", "event_group", EventGroup.all.collect {|p| [ p.name ] }) %> 
+    <%= content_tag :button, type: :submit do %>
+      Buscar por Grupos
+    <% end %>
+  <% end %>
+</div>
+
+<dir class="resultados">
+  
+</dir>
 
 <ul class="list-group">
   <% @events.each do |event| %>
@@ -25,9 +38,6 @@
       <% else %>
       <%= link_to 'Inscribirse', register_event_path(event), class: 'button btn btn-sm btn-lg btn-block'%>
       <% end %>
-      
-      
-     
     </div>
   </li>
   <% end %>
